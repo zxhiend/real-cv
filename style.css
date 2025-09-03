@@ -172,9 +172,74 @@ code, pre {
   border-radius: 2px;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
+/* Responsive layout - stack columns and adjust spacing for smaller screens */
+@media (max-width: 900px) {
+  .main-content {
+    margin: 18px 14px 0 14px;
+    padding: 22px 14px;
+  }
+
   .column {
     width: 100%;
+    padding: 14px 10px;
+    font-size: 95%;
+  }
+
+  /* remove vertical borders on stacked layout, use subtle horizontal separators instead */
+  .column:not(:first-child) {
+    border-left: none;
+    border-top: 1px solid #eee;
+  }
+
+  /* make the row stack vertically */
+  .row {
+    flex-direction: column;
+  }
+
+  /* slightly reduce header size */
+  .header {
+    padding: 28px 0 18px 0;
+  }
+
+  .header h1 {
+    font-size: 2.2em;
+    letter-spacing: 1px;
+  }
+
+  .header .subtitle {
+    font-size: 1.05em;
+  }
+
+  .showCreds {
+    display: inline-block;
+    float: none;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .main-content {
+    margin: 12px 8px 0 8px;
+    padding: 16px 10px;
+  }
+
+  .header h1 {
+    font-size: 1.6em;
+  }
+
+  .header .subtitle {
+    font-size: 0.95em;
+  }
+
+  /* make lists more compact on very small screens */
+  ul {
+    padding-left: 20px;
+    margin-top: 6px;
+    margin-bottom: 8px;
+  }
+
+  .listImage {
+    width: 18px;
+    height: 18px;
   }
 }
