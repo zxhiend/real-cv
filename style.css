@@ -257,7 +257,7 @@ code, pre {
 
 @media (max-width: 900px) {
   .header-logo {
-    display: none; /* hide decorative logo on smaller screens */
+    display: block; /* hide decorative logo on smaller screens */
   }
 }
 
